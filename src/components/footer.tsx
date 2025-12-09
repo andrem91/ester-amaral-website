@@ -1,0 +1,174 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+
+const footerLinks = {
+    menu: [
+        { href: "#inicio", label: "Início" },
+        { href: "#sobre", label: "Sobre Mim" },
+        { href: "#especialidades", label: "Especialidades" },
+        { href: "#abordagem", label: "Abordagem" },
+        { href: "#contato", label: "Contato" },
+    ],
+    especialidades: [
+        { href: "#", label: "Ansiedade e Depressão" },
+        { href: "#", label: "Maternidade" },
+        { href: "#", label: "Luto" },
+        { href: "#", label: "Autoconhecimento" },
+    ],
+};
+
+export function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="bg-neutral-900 text-white">
+            {/* Main Footer */}
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                    {/* Brand Column */}
+                    <div className="lg:col-span-1">
+                        <Link href="/" className="flex items-center gap-3 mb-6">
+                            <div className="relative w-12 h-12 bg-white rounded-lg p-1">
+                                <Image
+                                    src="/image/EA-Simbolo 2.png"
+                                    alt="Logo Ester Amaral"
+                                    fill
+                                    className="object-contain"
+                                />
+                            </div>
+                            <div>
+                                <p className="text-lg font-bold">Ester Amaral</p>
+                                <p className="text-xs text-neutral-400">Psicóloga Clínica</p>
+                            </div>
+                        </Link>
+                        <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+                            Psicoterapia com abordagem Winnicottiana. Um espaço seguro para o
+                            desenvolvimento do seu verdadeiro eu.
+                        </p>
+                        <div className="flex items-center gap-4">
+                            <Link
+                                href="https://www.instagram.com/psicologaesteramaral/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
+                                aria-label="Instagram"
+                            >
+                                <Instagram size={18} />
+                            </Link>
+                            <Link
+                                href="mailto:contato@psicologaesteramaral.com.br"
+                                className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
+                                aria-label="Email"
+                            >
+                                <Mail size={18} />
+                            </Link>
+                            <Link
+                                href="https://wa.me/5511988405439"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
+                                aria-label="WhatsApp"
+                            >
+                                <Phone size={18} />
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Menu Column */}
+                    <div>
+                        <h4 className="font-bold text-lg mb-6">Menu</h4>
+                        <ul className="space-y-3">
+                            {footerLinks.menu.map((link) => (
+                                <li key={link.href}>
+                                    <Link
+                                        href={link.href}
+                                        className="text-neutral-400 hover:text-terracotta-400 transition-colors text-sm"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Especialidades Column */}
+                    <div>
+                        <h4 className="font-bold text-lg mb-6">Especialidades</h4>
+                        <ul className="space-y-3">
+                            {footerLinks.especialidades.map((link) => (
+                                <li key={link.label}>
+                                    <Link
+                                        href={link.href}
+                                        className="text-neutral-400 hover:text-terracotta-400 transition-colors text-sm"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Contact Column */}
+                    <div>
+                        <h4 className="font-bold text-lg mb-6">Contato</h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3">
+                                <Phone size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
+                                <div>
+                                    <p className="text-neutral-400 text-sm">WhatsApp</p>
+                                    <Link
+                                        href="https://wa.me/5511988405439"
+                                        className="text-white hover:text-terracotta-400 transition-colors text-sm"
+                                    >
+                                        (11) 98840-5439
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <Mail size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
+                                <div>
+                                    <p className="text-neutral-400 text-sm">Email</p>
+                                    <Link
+                                        href="mailto:contato@psicologaesteramaral.com.br"
+                                        className="text-white hover:text-terracotta-400 transition-colors text-sm break-all"
+                                    >
+                                        contato@psicologaesteramaral.com.br
+                                    </Link>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <MapPin size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
+                                <div>
+                                    <p className="text-neutral-400 text-sm">Atendimento Presencial</p>
+                                    <p className="text-white text-sm">
+                                        R. dos Cafezais, 363 - Jardim Prudência
+                                        <br />
+                                        São Paulo - SP, 04364-000
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-neutral-800">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+                        <p>© {currentYear} Psicóloga Ester Amaral. Todos os direitos reservados.</p>
+                        <div className="flex items-center gap-6">
+                            <Link href="#" className="hover:text-neutral-300 transition-colors">
+                                Política de Privacidade
+                            </Link>
+                            <Link href="#" className="hover:text-neutral-300 transition-colors">
+                                Termos de Uso
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+}
