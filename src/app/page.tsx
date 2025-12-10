@@ -74,15 +74,15 @@ const benefits = [
 ];
 
 const especialidades = [
-  { icon: Baby, label: "Maternidade" },
-  { icon: Users, label: "Parentalidade" },
-  { icon: HeartCrack, label: "Conflitos Familiares" },
-  { icon: Heart, label: "Luto" },
-  { icon: Frown, label: "Ansiedade e Depressão" },
+  { icon: Baby, label: "Maternidade", href: "/maternidade" },
+  { icon: Users, label: "Adolescentes", href: "/adolescentes" },
+  { icon: HeartCrack, label: "Luto", href: "/luto" },
+  { icon: Frown, label: "Ansiedade e Depressão", href: "/ansiedade-e-depressao" },
+  { icon: BatteryLow, label: "Burnout", href: "/burnout" },
+  { icon: HeartHandshake, label: "Relacionamentos", href: "/relacionamentos" },
+  { icon: Heart, label: "Conflitos Familiares" },
+  { icon: CircleDot, label: "Autoconhecimento" },
   { icon: Salad, label: "Transtornos Alimentares" },
-  { icon: CircleDot, label: "Autoestima e Autoconhecimento" },
-  { icon: BatteryLow, label: "Sobrecarga Mental" },
-  { icon: HeartHandshake, label: "Relacionamentos Afetivos" },
 ];
 
 const diferenciais = [
@@ -419,23 +419,44 @@ export default function Home() {
             variants={staggerContainer}
             className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 max-w-4xl mx-auto"
           >
-            {especialidades.map((item) => (
-              <motion.div
-                key={item.label}
-                variants={scaleIn}
-                className="group flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 hover:bg-terracotta-50 border border-transparent hover:border-terracotta-200 transition-all cursor-default"
-              >
-                <div className="w-12 h-12 rounded-xl bg-terracotta-100 group-hover:bg-terracotta-500 flex items-center justify-center mb-4 transition-colors">
-                  <item.icon
-                    size={24}
-                    className="text-terracotta-600 group-hover:text-white transition-colors"
-                  />
-                </div>
-                <p className="font-semibold text-neutral-800 text-sm md:text-base">
-                  {item.label}
-                </p>
-              </motion.div>
-            ))}
+            {especialidades.map((item) => {
+              const content = (
+                <>
+                  <div className="w-12 h-12 rounded-xl bg-terracotta-100 group-hover:bg-terracotta-500 flex items-center justify-center mb-4 transition-colors">
+                    <item.icon
+                      size={24}
+                      className="text-terracotta-600 group-hover:text-white transition-colors"
+                    />
+                  </div>
+                  <p className="font-semibold text-neutral-800 text-sm md:text-base">
+                    {item.label}
+                  </p>
+                </>
+              );
+
+              if (item.href) {
+                return (
+                  <motion.div key={item.label} variants={scaleIn}>
+                    <Link
+                      href={item.href}
+                      className="group flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 hover:bg-terracotta-50 border border-transparent hover:border-terracotta-200 transition-all cursor-pointer block"
+                    >
+                      {content}
+                    </Link>
+                  </motion.div>
+                );
+              }
+
+              return (
+                <motion.div
+                  key={item.label}
+                  variants={scaleIn}
+                  className="group flex flex-col items-center text-center p-6 rounded-2xl bg-neutral-50 hover:bg-terracotta-50 border border-transparent hover:border-terracotta-200 transition-all cursor-default"
+                >
+                  {content}
+                </motion.div>
+              );
+            })}
           </motion.div>
         </div>
       </section>

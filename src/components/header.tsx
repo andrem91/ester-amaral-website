@@ -8,11 +8,11 @@ import { Menu, X, Phone, Instagram, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-    { href: "#inicio", label: "Início" },
-    { href: "#sobre", label: "Sobre Mim" },
-    { href: "#especialidades", label: "Especialidades" },
-    { href: "#abordagem", label: "Abordagem" },
-    { href: "#contato", label: "Contato" },
+    { href: "/", label: "Início" },
+    { href: "/sobre", label: "Sobre Mim" },
+    { href: "/servicos", label: "Serviços" },
+    { href: "/abordagem", label: "Abordagem" },
+    { href: "/contato", label: "Contato" },
 ];
 
 export function Header() {

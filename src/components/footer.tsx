@@ -4,17 +4,19 @@ import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 
 const footerLinks = {
     menu: [
-        { href: "#inicio", label: "Início" },
-        { href: "#sobre", label: "Sobre Mim" },
-        { href: "#especialidades", label: "Especialidades" },
-        { href: "#abordagem", label: "Abordagem" },
-        { href: "#contato", label: "Contato" },
+        { href: "/", label: "Início" },
+        { href: "/sobre", label: "Sobre Mim" },
+        { href: "/servicos", label: "Serviços" },
+        { href: "/abordagem", label: "Abordagem" },
+        { href: "/contato", label: "Contato" },
     ],
     especialidades: [
-        { href: "#", label: "Ansiedade e Depressão" },
-        { href: "#", label: "Maternidade" },
-        { href: "#", label: "Luto" },
-        { href: "#", label: "Autoconhecimento" },
+        { href: "/ansiedade-e-depressao", label: "Ansiedade e Depressão" },
+        { href: "/maternidade", label: "Maternidade" },
+        { href: "/luto", label: "Luto" },
+        { href: "/burnout", label: "Burnout" },
+        { href: "/adolescentes", label: "Adolescentes" },
+        { href: "/relacionamentos", label: "Relacionamentos" },
     ],
 };
 
@@ -160,10 +162,10 @@ export function Footer() {
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-300">
                         <p>© {currentYear} Psicóloga Ester Amaral. Todos os direitos reservados.</p>
                         <div className="flex items-center gap-6">
-                            <Link href="#" className="text-neutral-300 hover:text-white transition-colors">
+                            <Link href="/politica-de-privacidade" className="text-neutral-300 hover:text-white transition-colors">
                                 Política de Privacidade
                             </Link>
-                            <Link href="#" className="text-neutral-300 hover:text-white transition-colors">
+                            <Link href="/termos-de-uso" className="text-neutral-300 hover:text-white transition-colors">
                                 Termos de Uso
                             </Link>
                         </div>
