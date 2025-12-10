@@ -2,6 +2,26 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Heart, Clock, Flower2, Sun, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
+
+const faqItems = [
+    {
+        question: "Existe um tempo certo para superar o luto?",
+        answer: "Não existe um prazo definido. O luto é um processo individual e respeitar seu tempo é fundamental. Na terapia, trabalhamos para você viver esse processo de forma saudável, sem pressão.",
+    },
+    {
+        question: "A terapia ajuda também em perdas que não são por morte?",
+        answer: "Sim! Trabalhamos com diversas formas de perda: fim de relacionamentos, demissão, mudanças de vida, perda de saúde, entre outras. Toda perda significativa merece ser elaborada.",
+    },
+    {
+        question: "Você atende luto gestacional?",
+        answer: "Sim. O luto gestacional e perinatal é uma área que tenho especial cuidado. É uma dor muitas vezes invisibilizada pela sociedade, e ofereço um espaço seguro para elaborá-la.",
+    },
+    {
+        question: "É normal sentir raiva ou culpa no luto?",
+        answer: "Totalmente normal. O luto envolve muitas emoções além da tristeza: raiva, culpa, alívio, confusão. Na terapia, acolhemos todos esses sentimentos sem julgamento.",
+    },
+];
 
 export const metadata: Metadata = {
     title: "Luto e Perdas Emocionais | Psicóloga Ester Amaral - São Paulo",
@@ -196,6 +216,13 @@ export default function LutoPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Luto"
+                subtitle="Dúvidas frequentes sobre acompanhamento psicológico para perdas."
+                items={faqItems}
+            />
 
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">

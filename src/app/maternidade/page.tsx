@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Baby, Heart, Users, Sparkles, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
 
 export const metadata: Metadata = {
     title: "Maternidade e Puerpério | Psicóloga Ester Amaral - São Paulo",
@@ -48,6 +49,29 @@ const topicos = [
         title: "Gestação",
         description:
             "Acompanhamento psicológico durante a gravidez, preparação emocional para a chegada do bebê e elaboração de expectativas.",
+    },
+];
+
+const faqItems = [
+    {
+        question: "Quando devo procurar ajuda psicológica na maternidade?",
+        answer: "Sempre que sentir que precisa de apoio. Não é necessário estar em crise para buscar terapia. Se você está se sentindo sobrecarregada, ansiosa, com dificuldade de conexão com o bebê ou simplesmente precisa de um espaço para falar, a terapia pode ajudar.",
+    },
+    {
+        question: "Você atende gestantes?",
+        answer: "Sim! O acompanhamento psicológico durante a gestação é muito valioso. Trabalhamos questões como medos, expectativas, preparação emocional para a chegada do bebê e mudanças na identidade e nos relacionamentos.",
+    },
+    {
+        question: "Como funciona a terapia no puerpério com bebê pequeno?",
+        answer: "Entendo as limitações dessa fase. Oferecemos flexibilidade de horários e atendimento online, facilitando o acesso à terapia mesmo com um recém-nascido em casa. Se necessário, o bebê pode estar presente na sessão.",
+    },
+    {
+        question: "É normal sentir arrependimento ou ambivalência na maternidade?",
+        answer: "Sim, é mais comum do que você imagina. Muitas mães sentem sentimentos contraditórios, e isso não significa que você não ama seu filho. Na terapia, criamos um espaço seguro para falar sobre esses sentimentos sem julgamento.",
+    },
+    {
+        question: "Atende casos de depressão pós-parto?",
+        answer: "Sim. A depressão pós-parto requer atenção especializada. Trabalho em parceria com psiquiatras quando necessário, garantindo um acompanhamento completo e seguro.",
     },
 ];
 
@@ -186,6 +210,13 @@ export default function MaternidadePage() {
                 </div>
             </section>
 
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Maternidade"
+                subtitle="Dúvidas frequentes sobre o acompanhamento psicológico para mães e gestantes."
+                items={faqItems}
+            />
+
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center">
@@ -210,3 +241,4 @@ export default function MaternidadePage() {
         </>
     );
 }
+

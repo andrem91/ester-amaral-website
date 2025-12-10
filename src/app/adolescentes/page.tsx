@@ -2,6 +2,26 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, User, Brain, Shield, MessageCircle, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
+
+const faqItems = [
+    {
+        question: "Qual a idade mínima para atendimento?",
+        answer: "Atendo adolescentes a partir de 12 anos. Para crianças mais novas, posso indicar profissionais especializados em atendimento infantil.",
+    },
+    {
+        question: "Os pais participam das sessões?",
+        answer: "As sessões são individuais com o adolescente, garantindo sigilo e confiança. Porém, faço sessões periódicas com os pais para alinhar o processo e oferecer orientações quando necessário.",
+    },
+    {
+        question: "Meu filho não quer fazer terapia. O que faço?",
+        answer: "A resistência é comum. Sugiro uma primeira sessão para que ele conheça o processo sem compromisso. Muitas vezes, após entender como funciona, a resistência diminui.",
+    },
+    {
+        question: "O que é confidencial na terapia com adolescentes?",
+        answer: "O conteúdo das sessões é sigiloso. Só compartilho informações com os pais se houver risco à vida ou integridade do adolescente, sempre comunicando a ele primeiro.",
+    },
+];
 
 export const metadata: Metadata = {
     title: "Psicóloga para Adolescentes | Ester Amaral - São Paulo",
@@ -195,6 +215,13 @@ export default function AdolescentesPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Terapia para Adolescentes"
+                subtitle="Dúvidas frequentes dos pais sobre o atendimento."
+                items={faqItems}
+            />
 
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">

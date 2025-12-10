@@ -2,6 +2,26 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, HeartHandshake, Heart, Users, MessageCircle, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
+
+const faqItems = [
+    {
+        question: "A terapia ajuda com dependência emocional?",
+        answer: "Sim! Trabalhamos para você compreender os padrões que levam à dependência emocional, fortalecendo sua autoestima e capacidade de estabelecer relações mais saudáveis.",
+    },
+    {
+        question: "Preciso estar em um relacionamento para fazer terapia?",
+        answer: "Não! Trabalhamos tanto questões de relacionamentos atuais quanto padrões que se repetem, dificuldades em iniciar relacionamentos ou elaborar términos.",
+    },
+    {
+        question: "Você faz terapia de casal?",
+        answer: "Meu foco é no atendimento individual, onde trabalhamos suas questões relacionais. Para terapia de casal, específica, posso indicar profissionais especializados.",
+    },
+    {
+        question: "Por que sempre me envolvo com pessoas erradas?",
+        answer: "Essa é uma pergunta que muitos pacientes trazem. Geralmente envolve padrões inconscientes formados na infância. Na terapia, identificamos esses padrões e trabalhamos para transformá-los.",
+    },
+];
 
 export const metadata: Metadata = {
     title: "Relacionamentos Afetivos | Psicóloga Ester Amaral - São Paulo",
@@ -184,6 +204,13 @@ export default function RelacionamentosPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Relacionamentos"
+                subtitle="Dúvidas frequentes sobre terapia para questões afetivas."
+                items={faqItems}
+            />
 
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">

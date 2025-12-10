@@ -1,7 +1,27 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, BatteryLow, Brain, Flame, Heart, ArrowRight } from "lucide-react";
+import { Phone, BatteryLow, Brain, Heart, Flame, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
+
+const faqItems = [
+    {
+        question: "Como saber se tenho burnout?",
+        answer: "O burnout se manifesta por exaustão física e emocional, distanciamento mental do trabalho e redução da eficácia profissional. Se você se sente constantemente esgotado e incapaz de recuperar energia, pode ser burnout.",
+    },
+    {
+        question: "Preciso me afastar do trabalho para tratar burnout?",
+        answer: "Nem sempre. Isso depende da gravidade do caso. Na terapia, avaliamos sua situação e trabalhamos estratégias que podem ou não incluir afastamento, sempre priorizando sua saúde.",
+    },
+    {
+        question: "A terapia sozinha resolve o burnout?",
+        answer: "A terapia é fundamental, mas o tratamento pode envolver mudanças no ambiente de trabalho, hábitos de vida e, em alguns casos, acompanhamento médico. Trabalhamos de forma integrada.",
+    },
+    {
+        question: "Quanto tempo leva para melhorar do burnout?",
+        answer: "O tempo varia muito. Alguns pacientes sentem melhora em poucas semanas, outros precisam de meses. O importante é começar o tratamento o quanto antes para evitar agravamento.",
+    },
+];
 
 export const metadata: Metadata = {
     title: "Burnout e Esgotamento Mental | Psicóloga Ester Amaral - São Paulo",
@@ -195,6 +215,13 @@ export default function BurnoutPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Burnout"
+                subtitle="Dúvidas frequentes sobre esgotamento mental."
+                items={faqItems}
+            />
 
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">

@@ -2,6 +2,30 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Phone, Brain, Frown, Heart, Shield, ArrowRight } from "lucide-react";
+import { SpecialtyFAQ } from "@/components/specialty-faq";
+
+const faqItems = [
+    {
+        question: "Quanto tempo dura o tratamento para ansiedade ou depressão?",
+        answer: "O tempo de tratamento varia de pessoa para pessoa. Depende da intensidade dos sintomas, da sua história e de como você responde à terapia. O importante é respeitar seu ritmo.",
+    },
+    {
+        question: "Preciso tomar remédio junto com a terapia?",
+        answer: "Nem sempre. A medicação pode ser necessária em alguns casos, e essa decisão é sempre tomada em conjunto com um psiquiatra. A terapia complementa e potencializa o tratamento.",
+    },
+    {
+        question: "Como saber se o que sinto é ansiedade ou depressão?",
+        answer: "Ansiedade e depressão podem coexistir. Na terapia, ajudo você a compreender o que está sentindo e a identificar os sintomas específicos do seu caso.",
+    },
+    {
+        question: "A terapia online funciona para ansiedade e depressão?",
+        answer: "Sim! Estudos mostram que a terapia online é tão eficaz quanto a presencial. O mais importante é você se sentir confortável e comprometido com o processo.",
+    },
+    {
+        question: "Estou em crise, vocês fazem atendimento emergencial?",
+        answer: "Se você está em crise, o ideal é buscar um CAPS ou pronto-socorro psiquiátrico. Para acompanhamento contínuo, agende uma sessão e começaremos seu tratamento.",
+    },
+];
 
 export const metadata: Metadata = {
     title: "Ansiedade e Depressão | Psicóloga Ester Amaral - São Paulo",
@@ -216,6 +240,13 @@ export default function AnsiedadeDepressaoPage() {
                     </div>
                 </div>
             </section>
+
+            {/* FAQ Section */}
+            <SpecialtyFAQ
+                title="Perguntas sobre Ansiedade e Depressão"
+                subtitle="Dúvidas frequentes sobre o tratamento psicológico."
+                items={faqItems}
+            />
 
             {/* CTA Section */}
             <section className="py-24 bg-gradient-to-br from-terracotta-600 to-terracotta-700">
