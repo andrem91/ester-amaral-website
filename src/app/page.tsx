@@ -207,6 +207,7 @@ export default function Home() {
                     height={625}
                     className="object-cover w-full h-full"
                     priority
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                   />
                   {/* Overlay gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent" />
@@ -301,6 +302,7 @@ export default function Home() {
                   alt="Psicóloga Ester Amaral em ambiente de trabalho acolhedor"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/50 to-transparent" />
               </div>
@@ -491,9 +493,9 @@ export default function Home() {
                     <div className="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center mb-4 mx-auto sm:mx-0">
                       <item.icon size={24} className="text-terracotta-600" />
                     </div>
-                    <h4 className="font-bold text-neutral-900 mb-2">
+                    <h3 className="font-bold text-neutral-900 mb-2">
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className="text-sm text-neutral-500">
                       {item.description}
                     </p>

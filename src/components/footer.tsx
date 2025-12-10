@@ -35,6 +35,7 @@ export function Footer() {
                                     alt="Logo Ester Amaral"
                                     fill
                                     className="object-contain"
+                                    sizes="48px"
                                 />
                             </div>
                             <div>
@@ -42,7 +43,7 @@ export function Footer() {
                                 <p className="text-xs text-neutral-400">Psicóloga Clínica</p>
                             </div>
                         </Link>
-                        <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+                        <p className="text-neutral-300 text-sm leading-relaxed mb-6">
                             Psicoterapia com abordagem Winnicottiana. Um espaço seguro para o
                             desenvolvimento do seu verdadeiro eu.
                         </p>
@@ -77,7 +78,7 @@ export function Footer() {
 
                     {/* Menu Column */}
                     <div>
-                        <h4 className="font-bold text-lg mb-6">Menu</h4>
+                        <h3 className="font-bold text-lg mb-6">Menu</h3>
                         <ul className="space-y-3">
                             {footerLinks.menu.map((link) => (
                                 <li key={link.href}>
@@ -94,13 +95,13 @@ export function Footer() {
 
                     {/* Especialidades Column */}
                     <div>
-                        <h4 className="font-bold text-lg mb-6">Especialidades</h4>
+                        <h3 className="font-bold text-lg mb-6">Especialidades</h3>
                         <ul className="space-y-3">
                             {footerLinks.especialidades.map((link) => (
                                 <li key={link.label}>
                                     <Link
                                         href={link.href}
-                                        className="text-neutral-400 hover:text-terracotta-400 transition-colors text-sm"
+                                        className="text-neutral-300 hover:text-terracotta-400 transition-colors text-sm"
                                     >
                                         {link.label}
                                     </Link>
@@ -111,12 +112,12 @@ export function Footer() {
 
                     {/* Contact Column */}
                     <div>
-                        <h4 className="font-bold text-lg mb-6">Contato</h4>
+                        <h3 className="font-bold text-lg mb-6">Contato</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <Phone size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
                                 <div>
-                                    <p className="text-neutral-400 text-sm">WhatsApp</p>
+                                    <p className="text-neutral-300 text-sm">WhatsApp</p>
                                     <Link
                                         href="https://wa.me/5511988405439"
                                         className="text-white hover:text-terracotta-400 transition-colors text-sm"
@@ -128,7 +129,7 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <Mail size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
                                 <div>
-                                    <p className="text-neutral-400 text-sm">Email</p>
+                                    <p className="text-neutral-300 text-sm">Email</p>
                                     <Link
                                         href="mailto:contato@psicologaesteramaral.com.br"
                                         className="text-white hover:text-terracotta-400 transition-colors text-sm break-all"
@@ -140,7 +141,7 @@ export function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin size={18} className="text-terracotta-500 mt-0.5 flex-shrink-0" />
                                 <div>
-                                    <p className="text-neutral-400 text-sm">Atendimento Presencial</p>
+                                    <p className="text-neutral-300 text-sm">Atendimento Presencial</p>
                                     <p className="text-white text-sm">
                                         R. dos Cafezais, 363 - Jardim Prudência
                                         <br />

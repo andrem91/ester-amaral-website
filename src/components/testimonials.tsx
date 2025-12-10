@@ -118,10 +118,10 @@ export function Testimonials() {
                                         setAutoPlay(false);
                                         setCurrent(index);
                                     }}
-                                    className={`w-2.5 h-2.5 rounded-full transition-all ${index === current
-                                            ? "bg-terracotta-500 w-8"
-                                            : "bg-neutral-300 hover:bg-neutral-400"
-                                        }`}
+                                    className={`w-3 h-3 rounded-full transition-all ${index === current
+                                        ? "bg-terracotta-500 w-8"
+                                        : "bg-neutral-300 hover:bg-neutral-400"
+                                        } p-2 box-content`}
                                     aria-label={`Ir para depoimento ${index + 1}`}
                                 />
                             ))}

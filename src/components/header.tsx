@@ -46,6 +46,7 @@ export function Header() {
                                 alt="Logo Ester Amaral"
                                 fill
                                 className="object-contain"
+                                sizes="48px"
                             />
                         </div>
                         <div className="hidden sm:block">
