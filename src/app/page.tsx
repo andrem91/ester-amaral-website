@@ -187,12 +187,7 @@ export default function Home() {
             </motion.div>
 
             {/* Hero Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative order-1 lg:order-2"
-            >
+            <div className="relative order-1 lg:order-2">
               <div className="relative aspect-[3/4] max-w-xs sm:max-w-sm mx-auto lg:max-w-md">
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-56 h-56 bg-terracotta-200/30 rounded-full blur-3xl" />
@@ -224,7 +219,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

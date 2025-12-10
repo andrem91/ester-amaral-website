@@ -91,7 +91,7 @@ export function Testimonials() {
                                     <p className="font-bold text-neutral-900">
                                         {testimonials[current].author}
                                     </p>
-                                    <p className="text-sm text-neutral-500">
+                                    <p className="text-sm text-neutral-600">
                                         {testimonials[current].role}
                                     </p>
                                 </div>
