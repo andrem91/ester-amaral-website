@@ -207,6 +207,7 @@ export default function Home() {
                     height={625}
                     className="object-cover w-full h-full"
                     priority
+                    fetchPriority="high"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 500px"
                   />
                   {/* Overlay gradient */}

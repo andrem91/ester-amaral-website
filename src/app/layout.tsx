@@ -142,6 +142,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={manrope.variable}>
       <head>
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://maps.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

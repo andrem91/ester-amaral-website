@@ -110,7 +110,7 @@ export function Testimonials() {
                         </button>
 
                         {/* Dots */}
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-3">
                             {testimonials.map((_, index) => (
                                 <button
                                     key={index}
@@ -118,10 +118,10 @@ export function Testimonials() {
                                         setAutoPlay(false);
                                         setCurrent(index);
                                     }}
-                                    className={`w-3 h-3 rounded-full transition-all ${index === current
-                                        ? "bg-terracotta-500 w-8"
-                                        : "bg-neutral-300 hover:bg-neutral-400"
-                                        } p-2 box-content`}
+                                    className={`relative flex items-center justify-center min-w-[44px] min-h-[44px] transition-all ${index === current
+                                        ? "before:bg-terracotta-500 before:w-8 before:h-3"
+                                        : "before:bg-neutral-300 hover:before:bg-neutral-400 before:w-3 before:h-3"
+                                        } before:rounded-full before:transition-all`}
                                     aria-label={`Ir para depoimento ${index + 1}`}
                                 />
                             ))}

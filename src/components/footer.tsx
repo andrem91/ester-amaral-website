@@ -157,13 +157,13 @@ export function Footer() {
             {/* Bottom Bar */}
             <div className="border-t border-neutral-800">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 py-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-300">
                         <p>© {currentYear} Psicóloga Ester Amaral. Todos os direitos reservados.</p>
                         <div className="flex items-center gap-6">
-                            <Link href="#" className="hover:text-neutral-300 transition-colors">
+                            <Link href="#" className="text-neutral-300 hover:text-white transition-colors">
                                 Política de Privacidade
                             </Link>
-                            <Link href="#" className="hover:text-neutral-300 transition-colors">
+                            <Link href="#" className="text-neutral-300 hover:text-white transition-colors">
                                 Termos de Uso
                             </Link>
                         </div>
