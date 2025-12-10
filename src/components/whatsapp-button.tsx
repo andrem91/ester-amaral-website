@@ -15,7 +15,7 @@ export function WhatsAppButton() {
         >
             {/* Pulse ring */}
             <motion.span
-                className="absolute inset-0 rounded-full bg-green-500"
+                className="absolute inset-0 rounded-full bg-green-600"
                 animate={{
                     scale: [1, 1.3, 1],
                     opacity: [0.5, 0, 0.5],
@@ -29,7 +29,7 @@ export function WhatsAppButton() {
 
             {/* Button */}
             <motion.div
-                className="relative flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg shadow-green-500/30 transition-all"
+                className="relative flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg shadow-green-600/30 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >

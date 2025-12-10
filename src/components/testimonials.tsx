@@ -84,14 +84,14 @@ export function Testimonials() {
                                 transition={{ duration: 0.3 }}
                                 className="text-center relative z-10"
                             >
-                                <p className="text-lg md:text-xl text-neutral-700 leading-relaxed mb-8 italic">
+                                <p className="text-lg md:text-xl text-neutral-800 leading-relaxed mb-8 italic">
                                     &ldquo;{testimonials[current].text}&rdquo;
                                 </p>
                                 <div>
                                     <p className="font-bold text-neutral-900">
                                         {testimonials[current].author}
                                     </p>
-                                    <p className="text-sm text-neutral-600">
+                                    <p className="text-sm text-neutral-700">
                                         {testimonials[current].role}
                                     </p>
                                 </div>
