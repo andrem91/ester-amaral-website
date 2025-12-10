@@ -81,7 +81,7 @@ export function FAQ() {
                         >
                             <button
                                 onClick={() => toggleFAQ(index)}
-                                className="w-full flex items-center justify-between p-6 text-left hover:bg-neutral-50 transition-colors"
+                                className="w-full flex items-center justify-between p-6 text-left hover:bg-neutral-50 transition-colors cursor-pointer"
                             >
                                 <span className="font-semibold text-neutral-900 pr-4">
                                     {item.question}

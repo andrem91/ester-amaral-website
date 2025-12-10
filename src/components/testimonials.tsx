@@ -103,7 +103,7 @@ export function Testimonials() {
                     <div className="flex items-center justify-center gap-4 mt-8">
                         <button
                             onClick={prev}
-                            className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all"
+                            className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all cursor-pointer"
                             aria-label="Depoimento anterior"
                         >
                             <ChevronLeft size={24} />
@@ -118,7 +118,7 @@ export function Testimonials() {
                                         setAutoPlay(false);
                                         setCurrent(index);
                                     }}
-                                    className={`relative flex items-center justify-center min-w-[44px] min-h-[44px] transition-all ${index === current
+                                    className={`relative flex items-center justify-center min-w-[44px] min-h-[44px] transition-all cursor-pointer ${index === current
                                         ? "before:bg-terracotta-500 before:w-8 before:h-3"
                                         : "before:bg-neutral-300 hover:before:bg-neutral-400 before:w-3 before:h-3"
                                         } before:rounded-full before:transition-all`}
@@ -129,7 +129,7 @@ export function Testimonials() {
 
                         <button
                             onClick={next}
-                            className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all"
+                            className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all cursor-pointer"
                             aria-label="Próximo depoimento"
                         >
                             <ChevronRight size={24} />

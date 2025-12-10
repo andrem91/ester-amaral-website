@@ -34,7 +34,7 @@ export function ScrollToTop() {
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     onClick={scrollToTop}
-                    className="fixed bottom-24 right-6 z-40 w-12 h-12 bg-neutral-800 hover:bg-neutral-700 text-white rounded-full shadow-lg flex items-center justify-center transition-colors"
+                    className="fixed bottom-24 right-6 z-40 w-12 h-12 bg-neutral-800 hover:bg-neutral-700 text-white rounded-full shadow-lg flex items-center justify-center transition-colors cursor-pointer"
                     aria-label="Voltar ao topo"
                 >
                     <ArrowUp size={20} />

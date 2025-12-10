@@ -30,7 +30,7 @@ export function GoogleMap() {
                     <div className="flex flex-col sm:flex-row gap-3 mt-2">
                         <button
                             onClick={() => setLoaded(true)}
-                            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold text-sm transition-colors"
+                            className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-terracotta-500 hover:bg-terracotta-600 text-white font-semibold text-sm transition-colors cursor-pointer"
                         >
                             <MapPin size={18} />
                             Carregar Mapa
