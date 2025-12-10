@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FAQ } from "@/components/faq";
 import { Testimonials } from "@/components/testimonials";
 import { ContactForm } from "@/components/contact-form";
+import { GoogleMap } from "@/components/google-map";
 import {
   Phone,
   Heart,
@@ -614,19 +615,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-12 max-w-4xl mx-auto"
           >
-            <div className="rounded-3xl overflow-hidden shadow-lg border border-neutral-100">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.771307045542!2d-46.67329752378589!3d-23.64835976479594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5100a8b62c41%3A0xc39e5a9bed3d8edb!2sPsic%C3%B3loga%20Ester%20Amaral%20-%20Presencial%20e%20Online!5e0!3m2!1spt-BR!2sbr!4v1765307951166!5m2!1spt-BR!2sbr"
-                width="100%"
-                height="350"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Localização do consultório da Psicóloga Ester Amaral"
-                className="w-full"
-              />
-            </div>
+            <GoogleMap />
             <p className="text-center text-sm text-neutral-500 mt-4">
               📍 R. dos Cafezais, 363 - Jardim Prudência, Zona Sul - SP
             </p>

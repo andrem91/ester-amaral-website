@@ -29,7 +29,7 @@ export function WhatsAppButton() {
 
             {/* Button */}
             <motion.div
-                className="relative flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg shadow-green-600/30 transition-all"
+                className="relative flex items-center gap-3 bg-green-700 hover:bg-green-800 text-white rounded-full shadow-lg shadow-green-700/30 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
