@@ -3,8 +3,13 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
+import { trackEvent } from "@/lib/track-event";
 
 export function WhatsAppButton() {
+    const handleClick = () => {
+        trackEvent("click_whatsapp", { location: "floating_button" });
+    };
+
     return (
         <Link
             href="https://wa.me/5511988405439?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Psic%C3%B3loga%20Ester%20Amaral"
@@ -12,6 +17,7 @@ export function WhatsAppButton() {
             rel="noopener noreferrer"
             className="fixed bottom-6 right-6 z-50 group"
             aria-label="Agendar consulta pelo WhatsApp"
+            onClick={handleClick}
         >
             {/* Pulse ring */}
             <motion.span

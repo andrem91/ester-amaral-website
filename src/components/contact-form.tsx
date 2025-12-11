@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle, Loader2 } from "lucide-react";
+import { trackEvent } from "@/lib/track-event";
 
 export function ContactForm() {
     const [formData, setFormData] = useState({
@@ -34,6 +35,9 @@ export function ContactForm() {
             });
 
             if (!response.ok) throw new Error("Erro ao enviar");
+
+            // Track successful form submission
+            trackEvent("form_submit", { form_name: "contact_form" });
 
             setStatus("success");
             setFormData({ name: "", email: "", phone: "", message: "" });

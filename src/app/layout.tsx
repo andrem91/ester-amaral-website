@@ -6,7 +6,8 @@ import { Footer } from "@/components/footer";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { ScrollToTop } from "@/components/scroll-to-top";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics, MicrosoftClarity } from "@/components/analytics";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -157,6 +158,8 @@ export default function RootLayout({
         <ScrollToTop />
         <SpeedInsights />
         <Analytics />
+        <GoogleAnalytics />
+        <MicrosoftClarity />
       </body>
     </html>
   );
