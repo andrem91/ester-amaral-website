@@ -140,7 +140,7 @@ export default function AdolescentesPage() {
                         <div className="relative">
                             <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/image/Ester Amaral Psicologa clinica para mulheres_v3.png"
+                                    src="/image/Adolescentes.png"
                                     alt="Psicóloga Ester Amaral - Atendimento para Adolescentes"
                                     fill
                                     className="object-cover"

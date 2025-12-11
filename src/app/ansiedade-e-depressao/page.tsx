@@ -135,7 +135,7 @@ export default function AnsiedadeDepressaoPage() {
                         <div className="relative">
                             <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/image/Psicologa-Ester-Amaral-01.jpg"
+                                    src="/image/Ansiedade e Depressão.png"
                                     alt="Psicóloga Ester Amaral - Tratamento para Ansiedade e Depressão"
                                     fill
                                     className="object-cover"

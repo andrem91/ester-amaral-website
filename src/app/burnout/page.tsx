@@ -141,7 +141,7 @@ export default function BurnoutPage() {
                         <div className="relative">
                             <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/image/Psicologa-Ester-Amaral-01.jpg"
+                                    src="/image/Burnout.png"
                                     alt="Psicóloga Ester Amaral - Tratamento para Burnout"
                                     fill
                                     className="object-cover"

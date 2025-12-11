@@ -145,7 +145,7 @@ export default function MaternidadePage() {
                         <div className="relative">
                             <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/image/Ester-Amaral-Psicóloga-para-mulheres_01.jpg"
+                                    src="/image/Maternidade.png"
                                     alt="Psicóloga Ester Amaral - Especialista em Maternidade"
                                     fill
                                     className="object-cover"

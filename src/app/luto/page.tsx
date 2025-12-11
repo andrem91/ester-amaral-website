@@ -140,7 +140,7 @@ export default function LutoPage() {
                         <div className="relative">
                             <div className="relative aspect-square max-w-md mx-auto rounded-3xl overflow-hidden shadow-2xl">
                                 <Image
-                                    src="/image/Ester-Amaral-Psicóloga-para-mulheres_01.jpg"
+                                    src="/image/Luto e Perdas Emocionais.png"
                                     alt="Psicóloga Ester Amaral - Acompanhamento para Luto"
                                     fill
                                     className="object-cover"
