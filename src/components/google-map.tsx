@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, ExternalLink } from "lucide-react";
+import { ADDRESS } from "@/lib/constants";
 
 const MAPS_EMBED_URL =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.771307045542!2d-46.67329752378589!3d-23.64835976479594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5100a8b62c41%3A0xc39e5a9bed3d8edb!2sPsic%C3%B3loga%20Ester%20Amaral%20-%20Presencial%20e%20Online!5e0!3m2!1spt-BR!2sbr!4v1765307951166!5m2!1spt-BR!2sbr";
@@ -24,7 +25,7 @@ export function GoogleMap() {
                             Localização do Consultório
                         </p>
                         <p className="text-sm text-neutral-600">
-                            R. dos Cafezais, 363 - Jardim Prudência, São Paulo - SP
+                            {ADDRESS.shortAddress}
                         </p>
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3 mt-2">

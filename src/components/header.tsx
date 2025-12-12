@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Instagram, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { CONTACT, WHATSAPP } from "@/lib/constants";
 
 const navLinks = [
     { href: "/", label: "Início" },
@@ -74,7 +75,7 @@ export function Header() {
                     {/* CTA Button Desktop */}
                     <div className="hidden lg:flex items-center gap-4">
                         <Link
-                            href="https://wa.me/5511988405439?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta"
+                            href={WHATSAPP.linkAgendamento}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 bg-terracotta-500 hover:bg-terracotta-600 text-white px-6 py-3 rounded-full font-semibold text-sm transition-all hover:shadow-lg hover:shadow-terracotta-500/25 hover:-translate-y-0.5"
@@ -155,7 +156,7 @@ export function Header() {
                                 className="flex items-center justify-center gap-4 py-6 mt-4 border-t border-neutral-100"
                             >
                                 <Link
-                                    href="https://www.instagram.com/psicologaesteramaral/"
+                                    href={CONTACT.instagramUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all"
@@ -164,14 +165,14 @@ export function Header() {
                                     <Instagram size={22} />
                                 </Link>
                                 <Link
-                                    href="mailto:contato@psicologaesteramaral.com.br"
+                                    href={`mailto:${CONTACT.email}`}
                                     className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all"
                                     aria-label="Email"
                                 >
                                     <Mail size={22} />
                                 </Link>
                                 <Link
-                                    href="https://wa.me/5511988405439"
+                                    href={WHATSAPP.baseUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-12 h-12 rounded-full bg-neutral-100 hover:bg-terracotta-100 flex items-center justify-center text-neutral-600 hover:text-terracotta-600 transition-all"
@@ -188,7 +189,7 @@ export function Header() {
                                 transition={{ delay: 0.5 }}
                             >
                                 <Link
-                                    href="https://wa.me/5511988405439?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta"
+                                    href={WHATSAPP.linkAgendamento}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => setIsMobileMenuOpen(false)}

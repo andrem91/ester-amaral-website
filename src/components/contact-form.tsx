@@ -12,6 +12,7 @@ export function ContactForm() {
         phone: "",
         message: "",
     });
+    const [honeypot, setHoneypot] = useState(""); // Campo armadilha anti-spam
     const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
     const handleChange = (
@@ -22,6 +23,14 @@ export function ContactForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Anti-spam: se honeypot estiver preenchido, é bot
+        if (honeypot) {
+            // Simula sucesso para não alertar o bot
+            setStatus("success");
+            return;
+        }
+
         setStatus("loading");
 
         // Send data to API
@@ -110,6 +119,27 @@ export function ContactForm() {
                                 </motion.div>
                             ) : (
                                 <>
+                                    {/* Honeypot - Campo invisível anti-spam */}
+                                    <div
+                                        aria-hidden="true"
+                                        style={{
+                                            position: "absolute",
+                                            left: "-9999px",
+                                            top: "-9999px",
+                                        }}
+                                    >
+                                        <label htmlFor="website">Website</label>
+                                        <input
+                                            type="text"
+                                            id="website"
+                                            name="website"
+                                            value={honeypot}
+                                            onChange={(e) => setHoneypot(e.target.value)}
+                                            tabIndex={-1}
+                                            autoComplete="off"
+                                        />
+                                    </div>
+
                                     <div className="space-y-5">
                                         <div>
                                             <label

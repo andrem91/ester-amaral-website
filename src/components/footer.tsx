@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { CONTACT, WHATSAPP, ADDRESS } from "@/lib/constants";
 
 const footerLinks = {
     menu: [
@@ -51,7 +52,7 @@ export function Footer() {
                         </p>
                         <div className="flex items-center gap-4">
                             <Link
-                                href="https://www.instagram.com/psicologaesteramaral/"
+                                href={CONTACT.instagramUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
@@ -60,14 +61,14 @@ export function Footer() {
                                 <Instagram size={18} />
                             </Link>
                             <Link
-                                href="mailto:contato@psicologaesteramaral.com.br"
+                                href={`mailto:${CONTACT.email}`}
                                 className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
                                 aria-label="Email"
                             >
                                 <Mail size={18} />
                             </Link>
                             <Link
-                                href="https://wa.me/5511988405439"
+                                href={WHATSAPP.baseUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-neutral-800 hover:bg-terracotta-600 flex items-center justify-center transition-colors"
@@ -121,10 +122,10 @@ export function Footer() {
                                 <div>
                                     <p className="text-neutral-300 text-sm">WhatsApp</p>
                                     <Link
-                                        href="https://wa.me/5511988405439"
+                                        href={WHATSAPP.baseUrl}
                                         className="text-white hover:text-terracotta-400 transition-colors text-sm"
                                     >
-                                        (11) 98840-5439
+                                        {CONTACT.phoneFormatted}
                                     </Link>
                                 </div>
                             </li>
@@ -133,10 +134,10 @@ export function Footer() {
                                 <div>
                                     <p className="text-neutral-300 text-sm">Email</p>
                                     <Link
-                                        href="mailto:contato@psicologaesteramaral.com.br"
+                                        href={`mailto:${CONTACT.email}`}
                                         className="text-white hover:text-terracotta-400 transition-colors text-sm break-all"
                                     >
-                                        contato@psicologaesteramaral.com.br
+                                        {CONTACT.email}
                                     </Link>
                                 </div>
                             </li>
@@ -145,9 +146,9 @@ export function Footer() {
                                 <div>
                                     <p className="text-neutral-300 text-sm">Atendimento Presencial</p>
                                     <p className="text-white text-sm">
-                                        R. dos Cafezais, 363 - Jardim Prudência
+                                        {ADDRESS.street} - {ADDRESS.neighborhood}
                                         <br />
-                                        São Paulo - SP, 04364-000
+                                        {ADDRESS.city} - {ADDRESS.state}, {ADDRESS.cep}
                                     </p>
                                 </div>
                             </li>

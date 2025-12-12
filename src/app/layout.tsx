@@ -8,6 +8,7 @@ import { ScrollToTop } from "@/components/scroll-to-top";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics, MicrosoftClarity } from "@/components/analytics";
+import { CONTACT, ADDRESS, SITE } from "@/lib/constants";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -76,21 +77,21 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "@id": "https://psicologaesteramaral.com.br",
-  name: "Psicóloga Ester Amaral",
+  "@id": SITE.url,
+  name: SITE.name,
   description:
     "Psicóloga Clínica com abordagem Winnicottiana. Atendimento especializado em maternidade, ansiedade, depressão, luto e autoconhecimento.",
-  url: "https://psicologaesteramaral.com.br",
-  telephone: "+55 11 98840-5439",
-  email: "contato@psicologaesteramaral.com.br",
-  image: "https://psicologaesteramaral.com.br/image/Ester Amaral Psicologa clinica para mulheres_v3.png",
+  url: SITE.url,
+  telephone: `+55 ${CONTACT.phoneFormatted}`,
+  email: CONTACT.email,
+  image: `${SITE.url}/image/Ester Amaral Psicologa clinica para mulheres_v3.png`,
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "R. dos Cafezais, 363",
-    addressLocality: "São Paulo",
-    addressRegion: "SP",
-    postalCode: "04364-000",
+    streetAddress: ADDRESS.street,
+    addressLocality: ADDRESS.city,
+    addressRegion: ADDRESS.state,
+    postalCode: ADDRESS.cep,
     addressCountry: "BR",
   },
   geo: {
@@ -107,7 +108,7 @@ const jsonLd = {
     },
   ],
   sameAs: [
-    "https://www.instagram.com/psicologaesteramaral/",
+    CONTACT.instagramUrl,
   ],
   medicalSpecialty: [
     "Psychology",
